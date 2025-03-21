@@ -2,6 +2,8 @@ package httpRequest;
 
 import io.restassured.specification.RequestSpecification;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 
 public abstract class BaseRequest {
@@ -21,6 +23,20 @@ public abstract class BaseRequest {
 
     static boolean init = false;
     static PrintStream log;
+
+    public static PrintStream getLogPrintStream() {
+        if (!init) {
+            try {
+                log = new PrintStream(new FileOutputStream("RestAssuredDietitianLogs.txt", false), true); // false to overwrite
+            } catch (FileNotFoundException e) {
+                System.err.println("LogPrintStream File not found!!");
+                e.printStackTrace();
+                throw new RuntimeException("Failed to initialize log file", e); // Stop execution if log file can't be created
+            }
+            init = true;
+        }
+        return log;
+    }
 
 
     //Getters and setters for fields
