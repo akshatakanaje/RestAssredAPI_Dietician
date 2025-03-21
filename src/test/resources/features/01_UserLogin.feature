@@ -13,8 +13,8 @@ Feature: UserLogin Controller
 
   @Login_InvalidScenarios
   Scenario Outline: Negative test case for user login module
-    Given "User" creates request with "<Body>"
-    When User call HTTPs method
+    Given "User" creates invalid request with "<Body>"
+    When User calls "POST" request on "userLogin" with invalid dat
     Then User receives status
 
     Examples:
