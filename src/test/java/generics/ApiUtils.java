@@ -17,29 +17,10 @@ public class ApiUtils {
         String responseBody = response.getBody().asString();
         logger.info("Response Body: " + responseBody);
         System.out.println("Response Body: " + response.getBody().asString());
-
-        // Check if response body is empty or null
-        if (responseBody == null || responseBody.isEmpty()) {
-            logger.error("Response body is empty or null.");
-            return null;
-        }
-        String reqString = response.jsonPath().getString(req);
-        if (reqString == null) {
-            logger.error("Required field '" + req + "' is missing in the response.");
-        } else {
-            logger.info("Extracted field '" + req + "': " + reqString);
-        }
-
-        return reqString;
+        return responseBody;
     }
 
     public static void setAuth(Response response) {
-        // Log the full response body
-        logger.info("Response Body: " + response.getBody().asString());
-
-        // Log the status code for debugging purposes
-        logger.info("Status Code: " + response.getStatusCode());
-
         // Check if status code is 200 OK
         if (response.getStatusCode() == 200) {
             String token = extractFromResponse(response, "token");
