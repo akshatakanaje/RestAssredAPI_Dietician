@@ -2,7 +2,6 @@ package apiConfig;
 
 public class EnvConstants {
 
-    static final String restLogProperties = "src/test/resources/log4j2.properties";
     public static final String qaEnvironmentbaseURI = "https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/";
     public static final String jsonContentType = "application/json";
 

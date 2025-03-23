@@ -5,7 +5,7 @@ Feature: UserLogin Controller
   Scenario Outline: valid Credentials
     Given "User" creates request with "<Body>"
     When "User" call "POST" Request with "userLogin"
-    Then User receives 200 Status with response body
+    Then User receives 200 Status code
 
     Examples:
       | Body                         |
