@@ -1,0 +1,157 @@
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim@gmail.com",
+    "password": "test"
+}
+{
+    "errorCode": "Invalid UserName or Password",
+    "errorMessage": "Bad credentials"
+}
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim@gmail.com",
+    "password": "test"
+}
+{
+    "errorCode": "Invalid UserName or Password",
+    "errorMessage": "Bad credentials"
+}
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/invalidlogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim.numpy@gmail.com",
+    "password": "numpy@2025"
+}
+{
+    "timestamp": "2025-03-23T00:52:13.41443685",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "An unexpected error occurred."
+}
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/invalidlogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim.numpy@gmail.com",
+    "password": "numpy@2025"
+}
+{
+    "timestamp": "2025-03-23T00:52:13.874484541",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "An unexpected error occurred."
+}
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/invalidlogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim.numpy@gmail.com",
+    "password": "numpy@2025"
+}
+{
+    "timestamp": "2025-03-23T00:52:14.315905526",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "An unexpected error occurred."
+}
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/invalidlogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim.numpy@gmail.com",
+    "password": "numpy@2025"
+}
+{
+    "timestamp": "2025-03-23T00:52:14.751182326",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "An unexpected error occurred."
+}
+Request method:	POST
+Request URI:	https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/invalidlogin
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Authorization=Bearer null
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userLoginEmailId": "Tim.numpy@gmail.com",
+    "password": "numpy@2025"
+}
+{
+    "timestamp": "2025-03-23T00:52:15.189126971",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "An unexpected error occurred."
+}
