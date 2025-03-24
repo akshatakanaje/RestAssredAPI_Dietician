@@ -1,0 +1,94 @@
+{
+  "data": [{
+    "feature" : "Create Dietitian",
+    "scenarioName" : "Check if Admin able to create a dietitian with ValidDietitianWithAllValidFieldsPresentInRequestBody",
+    "ValidDietitianWithAllValidFieldsPresentInRequestBody" : {
+      "Firstname": "Prakash",
+      "Lastname": "R",
+      "Email": "prakash001@gmail.com",
+      "HospitalName": "Kaiser",
+      "HospitalCity": "San Clara",
+      "ContactNumber": "9867676789",
+      "Education": "MD",
+      "HospitalPincode": "987678",
+      "DateOfBirth": "1995-11-02",
+      "HospitalStreet": "street-road"
+    }
+  }, {
+      "feature": "Create Dietitian",
+      "scenarioName": "Check if Admin able to create a dietitian with SpecialCharactersInDietitianMandatoryFields ",
+      "SpecialCharactersInDietitianMandatoryFields": {
+        "Firstname": "!@#$%",
+        "Lastname": "!%^&",
+        "Email": "%^&*()",
+        "HospitalName": "%^&*(",
+        "HospitalCity": "!@$%^",
+        "ContactNumber": "!*(&^",
+        "Education": "4(*^%$",
+        "HospitalPincode": "!@#$%^&",
+        "DateOfBirth": "!%^&*()",
+        "HospitalStreet": "%^$#%^^&"
+      }
+    }, {
+    "feature": "Create Dietitian",
+    "scenarioName": "Check if Admin able to create a dietitian with OnlyNumbersInDietitianMandatoryFields",
+    "OnlyNumbersInDietitianMandatoryFields": {
+      "Firstname": 1234,
+      "Lastname": 890768,
+      "Email": 789065,
+      "HospitalName": 35678,
+      "HospitalCity": 53678,
+      "ContactNumber": 76589,
+      "Education": 890,
+      "HospitalPincode": 546738,
+      "DateOfBirth": 123456,
+      "HospitalStreet": 126789
+    }
+  }, {
+    "feature": "Create Dietitian",
+    "scenarioName": "Check if Admin able to create a dietitian with MissingMandatoryDetails",
+    "MissingMandatoryDetails": {
+      "Firstname": "",
+      "Lastname": "",
+      "Email": "",
+      "HospitalName": "",
+      "HospitalCity": "",
+      "ContactNumber": "",
+      "Education": "",
+      "HospitalPincode": "",
+      "DateOfBirth": "",
+      "HospitalStreet": ""
+    }
+  }, {
+    "feature": "Create Dietitian",
+    "scenarioName": "Check if Admin able to create a dietitian with ExistingContactNumber",
+    " ExistingContactNumber": {
+      "Firstname": "Prakash",
+      "Lastname": "Nayak",
+      "Email": "prakash003@gmail.com",
+      "HospitalName": "Kaiser",
+      "HospitalCity": "San Clara",
+      "ContactNumber": "2345678957",
+      "Education": "MD",
+      "HospitalPincode": "987678",
+      "DateOfBirth": "1995-11-09",
+      "HospitalStreet": "street-road"
+    }
+  }, {
+    "feature": "Create Dietitian",
+    "scenarioName": "Check if Admin able to create a dietitian with ExistingEmailId",
+    "ExistingEmailId": {
+      "Firstname": "Prakash",
+      "Lastname": "Nayak",
+      "Email": "tester09@gmail.com",
+      "HospitalName": "Kaiser",
+      "HospitalCity": "San Clara",
+      "ContactNumber": "9867676123",
+      "Education": "MD",
+      "HospitalPincode": "987678",
+      "DateOfBirth": "1996-11-03",
+      "HospitalStreet": "street-road"
+    }
+  }
+  ]
+}

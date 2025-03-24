@@ -11,12 +11,11 @@ Feature: DietitianModule
   @PostNewDietitian
   Scenario Outline: Check if Admin able to create a dietitian with valid endpoint and request body with Authorization
     When Admin creates and executes POST Request for the dietitian with "<ValidRequestBody>"
-    Then Admin receives 201 Created Status with dietitian response body containing "<UniqueDietitianIds>"
+    Then Admin receives 201 Created Status with dietitian response body containing "<UniqueDietitianId>"
 
     Examples:
-      | ValidRequestBody | UniqueDietitianIds |
-      | ValidDietitianWithAllValidFieldsPresentInRequestBody | UniqueDietitianIdOne |
-      | ValidDietitianWithMissingOptionalFieldInRequestBody  | UniqueDietitianIdTwo |
+      | ValidRequestBody | UniqueDietitianId |
+      | ValidDietitianWithAllValidFieldsPresentInRequestBody | UniqueDietitianId |
 
   @GetDietitianById
   Scenario: Check if Admin able to retrieve a dietitian with valid dietitian ID
@@ -81,50 +80,23 @@ Feature: DietitianModule
     When Admin creates DELETE Request with valid dietitianID
     Then Admin receives 401 Unauthorized
 
-  @PostNewProgram
+  @PostNewDietitian
   Scenario Outline: Check if Admin able to create a dietitian with invalid request body
     Given Admin creates POST Request for the dietitian with "<invalidData>" in request body
     When Admin sends HTTPS POST Request and invalid dietitian request Body with endpoint
     Then Admin receives 400 Bad Request Status
 
     Examples:
-      | invalidData                               |
-      | FirstName                                 |
-      | LastName                                  |
-      | Email Id                                  |
-      | HospitalName                              |
-      | HospitalCity                              |
-      | ContactNumber                             |
-      | Education                                 |
-      | HospitalPincode                           |
-      | DateOfBirth                               |
-      | HospitalStreet                            |
+      | invalidData                                 |
+      | SpecialCharactersInDietitianMandatoryFields |
+      | OnlyNumbersInDietitianMandatoryFields       |
+      | MissingMandatoryDetails                     |
+      | ExistingContactNumber                       |
+      | ExistingEmailId                             |
 
-    #for Invalid date of birth its giving 201
-
-  @PostNewProgram
-  Scenario Outline: Check if Admin able to create a dietitian with empty "<field>"
-    Given Admin creates POST Request for the dietitian with "<field>" in request body
-    When Admin sends HTTPS POST Request and invalid dietitian request Body with endpoint
-    Then Admin receives 400 Bad Request Status
-
-    Examples:
-      | field                                     |
-      | FirstName                                 |
-      | LastName                                  |
-      | Email Id                                  |
-      | HospitalName                              |
-      | HospitalCity                              |
-      | ContactNumber                             |
-      | Education                                 |
-      | HospitalPincode                           |
-      | DateOfBirth                               |
-      | HospitalStreet                            |
-      | ExistingContactNumber                     |
-      | ExistingEmailId                           |
-      | MissingMandatoryDetails                   |
-
+     #for Invalid date of birth its giving 201
      #for existing date of birth its giving 400 (DOB should not be unique)
+
 
   @UpdateDietitianById
   Scenario Outline: Check if Admin able to Update a dietitian with invalid request body
