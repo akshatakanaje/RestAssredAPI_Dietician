@@ -5,6 +5,8 @@ public class EnvConstants {
     public static final String qaEnvironmentBaseURI = "https://dieticianstaging-f334e4b782aa.herokuapp.com/dietician/";
     public static final String jsonContentType = "application/json";
 
+    public static final String TestDatajsonPath = "src/test/resources/testData/testdata.json";
+
 
     // Login constants
     public static final String endPoint_Login = "login";

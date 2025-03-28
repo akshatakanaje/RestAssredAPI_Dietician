@@ -19,7 +19,6 @@ public class GetRequest extends BaseRequest{
             throw new IllegalStateException("Required fields are not set.");
         }
 
-
         return RestAssured.given()
                 .baseUri(baseUrl)
                 .filters(new RequestLoggingFilter(LogDetail.ALL, getLogPrintStream()), // Ensure logging to the same PrintStream

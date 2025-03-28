@@ -12,8 +12,8 @@ public class DeleteRequest extends BaseRequest{
     public RequestSpecification buildRequest() {
 
         if (baseUrl == null|| token == null) {
-            System.out.println("baseUrl in getrequest : "+baseUrl);
-            System.out.println("Token in getrequest : "+token);
+            System.out.println("baseUrl: "+baseUrl);
+            System.out.println("Token: "+token);
             throw new IllegalStateException("Required fields are not set.");
         }
         return RestAssured.given()

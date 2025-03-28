@@ -49,12 +49,9 @@ public class UserLoginSteps {
 
     @BeforeMethod
     public void scenario(Scenario scenario) {
-        logger.info(
-                "===============================================================================================");
         logger.info(scenario.getSourceTagNames() + " : " + scenario.getName());
         logger.info(
                 "-----------------------------------------------------------------------------------------------");
-
     }
 
     @Given("{string} creates request with {string}")
@@ -62,7 +59,7 @@ public class UserLoginSteps {
         if (isAuthTokenGenerated == true) {
             logger.info("User is authenticated!!!");
         } else {
-            logger.info("Unauthorized User warning!!!");
+            logger.warn("Unauthorized User warning!!!");
         }
     }
     @When("{string} call {string} Request with {string}")

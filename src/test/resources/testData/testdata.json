@@ -89,6 +89,70 @@
       "DateOfBirth": "1996-11-03",
       "HospitalStreet": "street-road"
     }
+  }, {
+    "feature": "Update Dietitian",
+    "scenarioName": "Check if Admin able to update a UpdateDietitianWithAllValidFieldsPresentInRequestBody",
+    "UpdateDietitianWithAllValidFieldsPresentInRequestBody": {
+      "dietitianId": "{{dietitianId}}",
+      "Firstname": "Prakash",
+      "Lastname": "Nayak",
+      "Email": "prakash004@gmail.com",
+      "HospitalName": "Kaiser",
+      "HospitalCity": "San Clara",
+      "ContactNumber": "9867676123",
+      "Education": "MD",
+      "HospitalPincode": "987678",
+      "DateOfBirth": "1996-11-03",
+      "HospitalStreet": "street-road"
+    }
+  }, {
+    "feature": "Update Dietitian",
+    "scenarioName": "Check if Admin able to update a SpecialCharactersInDietitianMandatoryFieldsToUpdateDietitian ",
+    "SpecialCharactersInDietitianMandatoryFieldsToUpdateDietitian": {
+      "dietitianId": "{{dietitianId}}",
+      "Firstname": "!@#$%",
+      "Lastname": "!%^&",
+      "Email": "%^&*()",
+      "HospitalName": "%^&*(",
+      "HospitalCity": "!@$%^",
+      "ContactNumber": "!*(&^",
+      "Education": "4(*^%$",
+      "HospitalPincode": "!@#$%^&",
+      "DateOfBirth": "!%^&*()",
+      "HospitalStreet": "%^$#%^^&"
+    }
+  }, {
+    "feature": "Update Dietitian",
+    "scenarioName": "Check if Admin able to update a dietitian with MissingMandatoryDetailsToUpdateDietitian",
+    "MissingMandatoryDetailsToUpdateDietitian": {
+      "dietitianId": "{{dietitianId}}",
+      "Firstname": "",
+      "Lastname": "",
+      "Email": "",
+      "HospitalName": "",
+      "HospitalCity": "",
+      "ContactNumber": "",
+      "Education": "",
+      "HospitalPincode": "",
+      "DateOfBirth": "",
+      "HospitalStreet": ""
+    }
+  }, {
+    "feature": "Update Dietitian",
+    "scenarioName": "Check if Admin able to update a dietitian with OnlyNumbersInDietitianMandatoryFieldsToUpdateDietitian",
+    "OnlyNumbersInDietitianMandatoryFieldsToUpdateDietitian": {
+      "dietitianId": "{{dietitianId}}",
+      "Firstname": 1234,
+      "Lastname": 890768,
+      "Email": 789065,
+      "HospitalName": 35678,
+      "HospitalCity": 53678,
+      "ContactNumber": 76589,
+      "Education": 890,
+      "HospitalPincode": 546738,
+      "DateOfBirth": 123456,
+      "HospitalStreet": 126789
+    }
   }
   ]
 }

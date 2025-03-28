@@ -23,7 +23,8 @@ Feature: DietitianModule
     Then Admin receives 200 OK Status with required dietitian response body
 
   @UpdateDietitianById
-  Scenario: Check if admin able to update a dietitian with valid dietitianId and mandatory fields in request body
+  Scenario: Check if admin able to update a dietitian with valid dietitianId and valid request body
+    Given Admin creates PUT Request for the dietitian endpoint to "UpdateDietitianWithAllValidFieldsPresentInRequestBody"
     When Admin creates PUT Request with valid dietitianId and request body
     Then Admin receives 200 OK Status with updated value in response body with message "OK"
 
@@ -94,7 +95,7 @@ Feature: DietitianModule
       | ExistingContactNumber                       |
       | ExistingEmailId                             |
 
-     #for Invalid date of birth its giving 201
+     #for Invalid date of birth its giving 201(it should give 400)
      #for existing date of birth its giving 400 (DOB should not be unique)
 
 
@@ -105,18 +106,11 @@ Feature: DietitianModule
     Then Admin receives 400 Bad Request Status
 
     Examples:
-      | invalidDataToUpdate                       |
-      | FirstName                                 |
-      | LastName                                  |
-      | Email Id                                  |
-      | HospitalName                              |
-      | HospitalCity                              |
-      | ContactNumber                             |
-      | Education                                 |
-      | HospitalPincode                           |
-      | DateOfBirth                               |
-      | HospitalStreet                            |
-      | MissingMandatoryDetails                   |
+      | invalidDataToUpdate                                             |
+      | SpecialCharactersInDietitianMandatoryFieldsToUpdateDietitian    |
+      | MissingMandatoryDetailsToUpdateDietitian                        |
+      | OnlyNumbersInDietitianMandatoryFieldsToUpdateDietitian          |
+
 
   @invalidEndPoint
   Scenario: Check if Admin able to retrieve all dietitian with invalid Endpoint
